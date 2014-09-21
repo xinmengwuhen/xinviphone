@@ -1,0 +1,235 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="馨梦无痕，箫箭馨，馨">
+<title>馨梦无痕</title>
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+		$(function(){
+			var back = $('.back');
+			back.click(function() {
+				var timer = setInterval(function(){
+					$(window).scrollTop($(window).scrollTop()-50);
+					if($(window).scrollTop() == 0){
+						clearInterval(timer);
+					}
+				},2);
+			});
+
+			$(window).scroll(function() {
+				if($(window).scrollTop() < 100){
+					back.hide(500);
+				} else {
+					back.show(500);
+				}
+			});
+			
+		})
+</script>
+<!-- 以上是返回顶部特效 -->
+<script type="text/javascript" src="./js.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var img = $('.box img');
+			var flag = true;
+			var f = true;
+			var box = $('.box');
+			var px = [500,-500];
+			var op = 0.2;
+
+			box.mouseleave(function() {
+				flag = true;
+			});
+
+			img.mouseover(function() {
+
+				if(flag && f){
+					flag = false;
+					f = false;
+					var n = parseInt(Math.random() * 2);
+					var num = parseInt(Math.random() * 2);
+
+					if(num){
+						$(this).animate({left : px[n],opacity : op},400,function(){
+							comeback($(this));
+						});
+					} else {
+						$(this).animate({top : px[n], opacity : op},400,function(){
+							comeback($(this));
+						});
+					}
+					
+				}
+				
+			});
+
+			function comeback(obj){
+				f = true;
+				obj.css({
+					'left' : 0,
+					'top'  : 0,
+					'z-index' : 1,
+					'opacity' : 1
+				});
+				img.not(obj).each(function(){
+					$(this).css({
+						'z-index' : parseInt($(this).css('z-index')) + 1
+					});
+				})
+			}
+		})
+	</script>
+	<!-- 以上是图片切换效果 -->
+</head>
+
+<body>
+	<!-- 返回顶部开始 -->
+	<div class="back"></div>
+	<!-- <a href="#" class="to_top" title="返回顶部"><img src="images/huidaodingbu.gif" width="50" height="50" /></a> -->
+	<!-- 返回顶部结束 -->
+	<div id="tou">
+		<!-- 固定栏开始 -->
+	<div id="header">
+		<div id="header-zuo">
+			<a href="#" target="_blank">首  页</a>
+			<a href="#">馨梦无痕</a>
+			<a href="#">回忆青春</a>
+			<a href="http://weibo.com/xin20yan" target="_blank" target="_blank">微博互动</a>
+			<a href="xinqing.html" target="_blank">心情驿站</a>
+			<a href="#">不再回忆</a>
+			<a href="#">天空不空</a>
+			<a href="#">创新天地</a>
+			<a href="#">且行且珍惜</a>
+		</div>
+			<div id="header-you">
+			<a href="#">登陆</a>
+			<a href="#">注册</a>	
+			</div>
+	</div>
+	</div>
+	<!-- 固定栏结束 -->
+	<!-- 导航栏开始 -->
+	<div id="daohang">
+		<ul>
+			<li>
+				<a href="http://bbs.mfunz.com" target="_blank">魔趣论坛</a>
+				<a href="http://bbs.houdunwang.com" target="_blank">后盾论坛</a>
+				<a href="http://weibo.com/xin20yan" target="_blank">新浪微博</a>
+				<a href="http://www.jd.com/" target="_blank">京东商城</a>
+				<a href="http://www.baidu.com/" target="_blank">百度一下</a>
+				<a href="http://bbs.ztehn.com/portal.php" target="_blank">红牛V5</a>
+				<a href="http://www.mi.com" target="_blank">小米手机</a>
+				<a href="http://www.tianhebus.com/" target="_blank">回家指南</a>
+				<a href="http://www.net.cn/" target="_blank">万网</a>
+				<a href="photo.html" target="_blank">图片展示</a>
+				<a href="http://www.youku.com/" target="_blank">优酷</a>
+				<a href="http://www.taobao.com/" target="_blank">淘宝</a>
+				<a href="http://www.amazon.cn/" target="_blank">亚马逊</a>
+				<a href="http://www.hao123.com/" target="_blank">好123</a>
+				<a href="http://www.smartisan.com/" target="_blank">锤子手机</a>
+				<a href="http://bbs.anzhi.com/forum-1345-1.html" target="_blank">安智论坛</a>
+				<a href="http://www.tdbeta.cn/forum-288-1.html" target="_blank">TD之家</a>
+				<a href="http://www.miui.com/forum-476-1.html" target="_blank">MIUI论坛</a>
+				<a href="http://www.kuaixuewang.com" target="_blank">快学网</a>
+				<a href="" target="_blank">天空不空</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 导航栏结束 -->
+	<!-- logo和详细开始 -->
+	<div id="logoxin">
+		<div class="logo">
+			<a href=""><img src="./images/xmwh-logo.gif" title="馨梦无痕" border=0  /></a>
+			
+		</div>
+		<div class="xiangxi">
+				<img src="./images/myweixin.png" title="李伟文" />
+				<p>扫描左侧微信二维码 加我微信交流学习哈</p>
+		</div>
+	</div>
+	<!-- logo和详细结束 -->
+	<!-- 大图展览区域开始 -->
+	<div class="box">
+		<img src="./images/xinone.jpg" class="z1" title="馨梦无痕" />
+		<img src="./images/xinthree.jpg" class="z2" title="梦无痕" />
+		<img src="./images/xintwo.jpg" class="z3" title="无痕" />
+	</div>
+	<!-- 大图展览区域结束 -->
+	<!-- 介绍栏开始 -->
+	<div id="jieshaoye">
+		<div class="jieshao">
+			<h2>低调在潜行的字里行间里，流落在人间的繁华色彩上，点缀着梦想</h2>
+			<h2 style="color:#4AA847;">学习就像流水一样，需要时间的浇灌来引导自己的方向</h2>
+		</div>
+	</div>
+	<!-- 介绍栏结束 -->
+	<!-- 背景图开始 -->
+	<div id="beijingtu">
+		<h2>其实我一直都在，只是一直很低调，没有发觉我的存在</h2>
+		<p>在一个不属于自己的天空，来看看世界的不同</p>
+		<p>如果存在是一个不一样的色彩，那自己算是什么颜色</p>
+		<p>等待了许久，也期望了许久，来到的不过是路过</p>
+		<p>奔跑在不知何方的境地，也许会有不一样的烟火</p>
+		<p>抒写着人生中期盼的目光，可惜没有了结果</p>
+		<p></p>
+		<p></p>
+		<p>正在准备为网站慢慢加入一些特效（特效是用JS来写的），慢慢期待哈，会不定时的更新网站代码哈</p>
+	</div>
+	<!-- 背景图结束 -->
+	<!-- 亲人和简介专栏开始 -->
+	<div id="qinren">
+		<!-- 左边开始 -->
+		<div class="qinren-zhiai">
+			<ul>
+				<li>
+					<a href="" target="_blank">挚爱爹地</a>
+					<a href="#" target="_blank">挚爱妈咪</a>
+					<a href="http://user.qzone.qq.com/970631693?ptlang=2052" target="_blank">挚爱小弟</a>
+					<a href="http://user.qzone.qq.com/279382607/mood/4f0aa71038aa765320060200.1?ptlang=2052" target="_blank">挚爱靓姐</a>
+					<a href="http://user.qzone.qq.com/279382607/mood/4f0aa71038aa765320060200.1?ptlang=2052" target="_blank">挚爱侄子</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 左边结束 -->
+		<!-- 右边开始 -->
+		<div class="qinren-jianjie">
+			<ul>
+				<li>
+					<a><img src="images/diedi.jpg" title="挚爱爹地" onmouseover="setdiedi()"/></a>
+					<a href="" target="_blank"><img src="images/mami.jpg" title="挚爱妈咪" /></a>
+					<a href="http://user.qzone.qq.com/970631693?ptlang=2052" target="_blank"><img src="images/didi.jpg" title="挚爱弟弟" /></a>
+					<a href="http://user.qzone.qq.com/279382607/mood/4f0aa71038aa765320060200.1?ptlang=2052" target="_blank"><img src="images/liangjie.bmp" title="挚爱靓姐" /></a>
+					<a href="http://user.qzone.qq.com/279382607/mood/4f0aa71038aa765320060200.1?ptlang=2052" target="_blank"><img src="images/baobei.jpg" title="挚爱侄子" /></a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边结束 -->
+	</div>
+	<!-- 亲人和简介专栏结束 -->
+	<!-- 代码更新展示开始 -->
+	<div id="zhanshi">
+		<p>更新时间2014.05.18，更新内容点击a标签新页面打开，图片展示功能开始建立，优化了一些内部代码</p>
+		<p>更新时间2014.05.22，更新内容顶部固定栏移至底部，更新了一些自己常用的快捷标签</p>
+		<p>更新时间2014.05.25，回到顶部特效启用，挚爱系列开始编写</p>
+		<p>更新时间2014.06.02，心情驿站开始使用，记录身边点滴，分享心情趣事。</p>
+		<p>更新时间2014.06.09，挚爱系列已完成，有想法时会再次更新这个系列。</p>
+		<p>更新时间2014.06.21，logo和搜索开始布局，下次应该会更新网页换肤功能</p>
+		<p>更新时间2014.08.21，返回顶部效果重新定义，再加入了图片切换，效果更绚丽</p>
+		<p>更新时间2014.09.08，重新定义修改logo和flash的布局，下次更新应该是网站上线以来的大改版了，敬请期待</p>
+		<p>更新时间2014.09.10，修护一个已知的bug（logo的边框）</p>
+		<p>更新时间2014.09.15，修护</p>
+	</div>
+	<!-- 代码更新展示结束 -->
+	<!-- 页脚开始 -->
+	<div id="yejiao">
+		<p>本静态页面作者来自<span>馨梦无痕-一个属于自己的天空</span></p>
+		<p>本网站的灵感完全是自我发挥，想到什么就写什么，色彩和布局方面会有些许欠缺</p>
+		<p style="color:black;">大叔的网站邮箱：<a href="https://mail.sina.com.cn" target="_blank">xinmengwuhen526@sina.com</a></p>
+		<p>本网站代码大部分属于<span style="color:blue;">原创</span>，一些特效来源网络，欢迎攻城师们的意见和建议</p>
+	</div>
+	<!-- 页脚结束 -->
+</body>
+</html>

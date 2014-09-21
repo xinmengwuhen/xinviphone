@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,dl,dd,dir,h1,h2,h3,h4,h5,h6,p,pre,blockquote,hr,figure{
+	padding: 0px;
+	margin: 0px;
+	color: black;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+body{
+	color: white;
+	padding-bottom: 300px;
+}
+/*返回顶部开始*/
+html{
+	background: url(about:blank) fixed;
+}
+.back{
+	width: 57px;
+	height: 57px;
+	background: url(images/back.png) no-repeat;
+	position: fixed;
+	right: 15px;
+	bottom: 40px;
+	_position: absolute;
+	_right: 15px;
+	_top:expression(document.documentElement.clientHeight-this.offsetHeight-50+document.documentElement.scrollTop);
+	cursor: pointer;
+	display: none;
+}
+/*返回顶部结束*/
+/*固定栏开始*/
+#header{
+	width: 100%;
+	height: 40px;
+	background: #272A36;
+	margin: 0 auto;
+	line-height: 40px;
+	position: fixed;
+	bottom: 0px;
+}
+#header #header-zuo{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#header #header-zuo a{
+	color: white;
+	/*border-right:1px solid red;*/
+	display: block;
+	width: 120px;
+	height: 40px;
+	float: left;
+	text-align: center;
+
+}
+#header #header-zuo a:hover{
+	background: #ffffff;
+	text-decoration: none;
+	color: red;
+	font-weight: 600;
+}
+#header #header-you{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+#header #header-you a{
+	color: white;
+	display: block;
+	width: 60px;
+	height: 40px;
+	float: left;
+	text-align: center;
+}
+#header #header-you a:hover{
+	color: #347BCF;
+	background: #E6E6E6;
+	font-weight: 600;
+}
+/*固定栏结束*/
+/*导航栏开始*/
+#daohang{
+	width: 1200px;
+	height: 100px;
+	margin: 3px auto;
+	background: #272A36;
+	/*border: 1px solid #FE7F0E;*/
+}
+#daohang ul{
+	list-style-type:none;
+	padding: 5px;
+}
+#daohang ul li a{
+	margin: 15px 15px 15px 15px;
+	display: block;
+	float: left;
+	color: white;
+}
+#daohang ul li a:hover{
+	color: red;
+}
+/*导航栏结束*/
+/*logo和详细开始*/
+#logoxin{
+	width: 1200px;
+	height: 200px;
+	margin: 10px auto;
+/*	border: 1px solid red;*/
+	position: relative;
+}
+#logoxin .logo{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 500px;
+	height: 200px;
+}
+#logoxin .xiangxi{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 600px;
+	height: 200px;
+}
+#logoxin .xiangxi p{
+	position: absolute;
+	top: 60px;
+	right: 30px;
+	color: #D20000;
+	font-weight:700;
+	font-size: 30px;
+	width: 300px;
+	height: 100px;
+}
+/*logo和详细结束*/
+/*大图展览区域开始*/
+.box{
+			width: 1370px;
+			height: 800px;
+			box-shadow: 4px 4px 4px #999;
+			margin: 0px auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.box img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+		.z1{
+			z-index: 1;
+		}
+		.z2{
+			z-index: 2;
+		}
+		.z3{
+			z-index: 3;
+		}
+/*大图展览区域结束*/
+/*介绍栏开始*/
+#jieshaoye{
+	width: 1200px;
+	height: 100px;
+	/*border: 1px solid #363947;	*/
+	margin: 10px auto;
+	background: #3C4852;
+}
+#jieshaoye .jieshao h2{
+	color: white;
+	line-height: 50px;
+	text-align: center;
+}
+/*介绍栏结束*/
+/*背景图开始*/
+#beijingtu{
+	width: 1200px;
+	height: 450px;
+	background: #0D1015;
+	margin: 8px auto;
+	border:1px solid #000324;
+}
+#beijingtu h2{
+	text-align: center;
+	padding-top: 10px;
+}
+#beijingtu p{
+	text-align: center;
+	padding: 8px 0px;
+	font-size: 22px;
+	color: #FE0033;
+}
+/*背景图结束*/
+/*亲人和简介专栏开始*/
+#qinren{
+	width: 1200px;
+	height: 200px;
+	/*background: red;*/
+	margin: 0 auto;
+}
+/*左边开始*/
+#qinren .qinren-zhiai{
+	width: 100px;
+	height: 200px;
+	/*border: 1px solid #4DCFDC;*/
+	float: left;
+}
+#qinren .qinren-zhiai ul{
+	list-style-type:none;
+}
+#qinren .qinren-zhiai ul li a{
+	padding: 10px 18px;
+	display: block;
+	color: #272A36;
+}
+#qinren .qinren-zhiai ul li a:hover{
+	color: red;
+}
+/*左边结束*/
+/*右边开始*/
+#qinren .qinren-jianjie{
+	width: 1090px;
+	height: 200px;
+	/*border: 1px solid #4DCFDC;*/
+	float: left;
+	margin-left: 6px;
+}
+#qinren .qinren-jianjie ul{
+	list-style-type:none;
+}
+#qinren .qinren-jianjie ul li{
+
+}
+#qinren .qinren-jianjie ul li a{
+	background: purple;
+	float: left;
+	width: 200px;
+	height: 180px;
+	display: block;
+	border: none;
+	border: 1px solid none;
+	margin-left: 15px;
+	margin-top: 10px;
+	line-height:180px;
+	text-align: center;
+}
+#qinren .qinren-jianjie ul li a:hover{
+
+}
+/*右边结束*/
+/*亲人和简介专栏结束*/
+/*代码更新展示开始*/
+#zhanshi{
+	width: 1200px;
+	height: 600px;
+	/*border: 1px solid #298CE1;*/
+	margin: 10px auto;
+	background:#0D1015;
+}
+#zhanshi p{
+	text-align: center;
+	font-size: 23px;
+	color: #C53D3D; 
+}
+/*代码更新展示结束*/
+/*页脚开始*/
+#yejiao{
+	width: 1200px;
+	height: 120px;
+	margin: 0 auto;
+	/*border: 1px solid #9A23D2;*/
+	background: #3E95C9;
+}
+#yejiao p{
+	text-align: center;
+	color: red;
+	padding-top: 6px;
+	font-size: 20px;
+	font-weight: 600;
+}
+#yejiao p span{
+	color: black;
+}
+#yejiao p a{
+	color: #F92659;
+}
+/*页脚结束*/
